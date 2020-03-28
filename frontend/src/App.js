@@ -1,26 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './global.css';
+import Routes from './routes';
 
+//Propriedades - são atributos repassados para compontentes, seus nomes devem começar com letras maiúsculas
+//Estado - é uma informação que vai ser mantida pelo componente, seja ele um input de um usuário, ou uma api externa
+
+/* const [count, setCounter] = useState(0); //ao utilizar o useState, ele nos retorna um array
+// Array [valor,função de atualização do valor]
+return (
+  //JSX (JavaScript XML) - é quando o código html está dentro de um arquivo JS
+  <div>
+    <Header>Contador: {count}</Header>
+    {/* A função de incremento é criada e chamada entre chaves dentro do evento */
+  //   <button onClick={increment}>Incrementar</button>
+  // </div> 
+//Componente - é uma função que retorna um HTML, com funcionalidades JS e CSS
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello OmniStack 11.0!
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
 
+  return(
+    <Routes/>
+  ); 
+}
 export default App;
