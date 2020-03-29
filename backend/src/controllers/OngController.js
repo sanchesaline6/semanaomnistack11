@@ -1,5 +1,5 @@
 const connection = require('../database/connection');
-const crypto = require('crypto'); //pacote que possui o método para gerar um texto aleatório
+const generateUniqueId = require('../utils/generateUniqueId');
 
 module.exports = {
 
@@ -9,7 +9,7 @@ module.exports = {
 
     async create(request, response) {
         const { name, email, whatsapp, city, uf } = request.body; //solicita informações
-        const id = crypto.randomBytes(4).toString('HEX'); //gera 4 bytes de hexadecimais
+        const id = generateUniqueId();
 
         //cadastrar ong - conexão com banco de dados
         await connection('ongs').insert({
